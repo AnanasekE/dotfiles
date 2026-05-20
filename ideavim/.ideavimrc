@@ -1,0 +1,30 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Leader key to match Neovim
+let mapleader=" "
+
+" Core options similar to your Neovim setup
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set incsearch
+set scrolloff=10
+set splitright
+set splitbelow
+
+" Clear search highlight with Esc
+nnoremap <Esc> :nohlsearch<CR>
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
