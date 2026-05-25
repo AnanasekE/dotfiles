@@ -3,15 +3,17 @@
   "position": "top",
   "height": 30,
   "spacing": 1,
-  "modules-left": ["hyprland/workspaces", "custom/weather"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-right": [
-    "custom/power",
-    "network",
+    "tray",
+    //    "network",
     "backlight",
     "pulseaudio",
-    "memory",
-    "cpu",
+    "pulseaudio#microphone",
+    //    "memory",
+    //    "cpu",
     "clock",
+    "custom/power",
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -21,13 +23,6 @@
     "persistent-workspaces": {
       "*": [1, 2, 3, 4, 5],
     },
-  },
-  "custom/weather": {
-    "format": "{}°",
-    "tooltip": true,
-    "interval": 600,
-    "exec": "wttrbar --nerd --location Changchun",
-    "return-type": "json",
   },
   "custom/power": {
     "format": "",
@@ -58,8 +53,15 @@
       "default": ["", "", ""],
     },
   },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " ",
+    "on-click-right": "pamixer --default-source -t",
+    "scroll-step": 5,
+  },
   "backlight": {
-    "format": "{percent}% {icon}",
+    "format": "{icon} {percent}%",
     "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"],
   },
   "memory": {
@@ -74,5 +76,8 @@
     "format": "{:%H:%M}",
     "format-alt": "{:%A %d/%m/%Y}",
     "tooltip-format": "<span>{calendar}</span>",
+  },
+  "tray": {
+    "spacing": 10,
   },
 }

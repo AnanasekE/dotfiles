@@ -24,6 +24,7 @@ window#waybar {
   color: white;
 }
 
+
 tooltip {
   background: rgba(43, 48, 59, 0.5);
   border: 1px solid rgba(100, 114, 125, 0.5);
@@ -52,7 +53,6 @@ tooltip label {
   color: @workspaces-urgent-fg;
 }
 
-#custom-weather,
 #custom-power,
 #network,
 #backlight,
@@ -72,6 +72,7 @@ tooltip label {
 #custom-power {
   color: @power-color;
   border-bottom: 2px solid @power-color;
+  padding-left: 7px;
 }
 
 #network {
@@ -102,8 +103,4 @@ tooltip label {
 #clock {
   color: white;
   border-bottom: 2px solid @clock-color;
-}
-
-#tray {
-  padding: 0 10px;
 }

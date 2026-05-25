@@ -1,16 +1,16 @@
 #!/usr/bin/env sh
 set -eu
 
-choice=$(printf "%s\n" "Lock" "Reboot" "Power Off" | wofi --dmenu --prompt "Power")
+choice=$(printf "%s\n" "  Lock" "  Reboot" "  Power Off" | wofi --dmenu --insensitive --prompt "Power")
 
 case "$choice" in
-  "Lock")
+  "  Lock"*)
     hyprlock
     ;;
-  "Reboot")
+  "  Reboot"*)
     systemctl reboot
     ;;
-  "Power Off")
+  "  Power Off"*)
     systemctl poweroff
     ;;
   "")
