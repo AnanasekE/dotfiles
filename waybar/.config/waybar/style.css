@@ -16,8 +16,6 @@
 @define-color network-color #4fb2e6;
 @define-color pulseaudio-color #e69a4c;
 @define-color backlight-color #e6c06c;
-@define-color lock-color #4fb2e6;
-@define-color reboot-color #e6c06c;
 @define-color power-color #e76a6a;
 
 window#waybar {
@@ -55,8 +53,6 @@ tooltip label {
 }
 
 #custom-weather,
-#custom-lock,
-#custom-reboot,
 #custom-power,
 #network,
 #backlight,
@@ -71,16 +67,6 @@ tooltip label {
 #clock {
   background-color: rgba(43, 48, 59, 0.7);
   color: @clock-color;
-}
-
-#custom-lock {
-  color: @lock-color;
-  border-bottom: 2px solid @lock-color;
-}
-
-#custom-reboot {
-  color: @reboot-color;
-  border-bottom: 2px solid @reboot-color;
 }
 
 #custom-power {
