@@ -5,6 +5,9 @@
   "spacing": 1,
   "modules-left": ["hyprland/workspaces", "custom/weather"],
   "modules-right": [
+    "custom/lock",
+    "custom/reboot",
+    "custom/power",
     "network",
     "backlight",
     "pulseaudio",
@@ -27,6 +30,21 @@
     "interval": 600,
     "exec": "wttrbar --nerd --location Changchun",
     "return-type": "json",
+  },
+  "custom/lock": {
+    "format": "",
+    "on-click": "hyprlock",
+    "tooltip": false,
+  },
+  "custom/reboot": {
+    "format": "",
+    "on-click": "systemctl reboot",
+    "tooltip": false,
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "systemctl poweroff",
+    "tooltip": false,
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],

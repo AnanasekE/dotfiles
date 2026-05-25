@@ -86,6 +86,9 @@
 @define-color quote-color @green;
 @define-color idle-inhibitor-color @foreground;
 @define-color idle-inhibitor-active-color @red;
+@define-color lock-color @blue;
+@define-color reboot-color @yellow;
+@define-color power-color @red;
 
 * {
   border: none;
@@ -266,6 +269,24 @@ window#waybar {
 #custom-update {
   color: @updates-color;
   border-bottom-color: @updates-color;
+}
+
+#custom-lock {
+  color: @lock-color;
+  border-bottom-color: @lock-color;
+  padding-right: 12px;
+}
+
+#custom-reboot {
+  color: @reboot-color;
+  border-bottom-color: @reboot-color;
+  padding-right: 12px;
+}
+
+#custom-power {
+  color: @power-color;
+  border-bottom-color: @power-color;
+  padding-right: 13px;
 }
 
 #custom-voxtype {
