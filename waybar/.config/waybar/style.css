@@ -1,180 +1,45 @@
-/* Colorscheme (Everforest active by default). */
-
-/* Tokyo Night */
-@define-color background #1a1b26;
-@define-color background-light #24283b;
-@define-color foreground #c0caf5;
-@define-color black #15161e;
-@define-color red #f7768e;
-@define-color green #9ece6a;
-@define-color yellow #e0af68;
-@define-color blue #7aa2f7;
-@define-color magenta #bb9af7;
-@define-color cyan #7dcfff;
-@define-color white #a9b1d6;
-@define-color orange #ff9e64;
-
-/* Everforest Dark */
-@define-color background #2b3339;
-@define-color background-light #323c41;
-@define-color foreground #d3c6aa;
-@define-color black #3c474d;
-@define-color red #e67e80;
-@define-color green #a7c080;
-@define-color yellow #dbbc7f;
-@define-color blue #7fbbb3;
-@define-color magenta #d699b6;
-@define-color cyan #83c092;
-@define-color white #d3c6aa;
-@define-color orange #e69875;
-
-/* Pastel TTY */
-@define-color background #212121;
-@define-color background-light #3a3a3a;
-@define-color foreground #e0e0e0;
-@define-color black #5a5a5a;
-@define-color red #ff9a9e;
-@define-color green #b5e8a9;
-@define-color yellow #ffe6a7;
-@define-color blue #63a4ff;
-@define-color magenta #dda0dd;
-@define-color cyan #a3e8e8;
-@define-color white #ffffff;
-@define-color orange #ff8952;
-
-/* Gruvbox Dark */
-@define-color background #10151c;
-@define-color background-light #1a2431;
-@define-color foreground #c7d4e6;
-@define-color black #595959;
-@define-color red #e76a6a;
-@define-color green #39d99e;
-@define-color yellow #e6c06c;
-@define-color blue #4fb2e6;
-@define-color magenta #d97bb8;
-@define-color cyan #62bfae;
-@define-color white #dbe3ee;
-@define-color orange #e69a4c;
-
-/* Module colors */
-@define-color workspaces-color @foreground;
-@define-color workspaces-focused-bg @green;
-@define-color workspaces-focused-fg @cyan;
-@define-color workspaces-urgent-bg @red;
-@define-color workspaces-urgent-fg @black;
-@define-color mode-color @orange;
-@define-color mpd-color @magenta;
-@define-color weather-color @magenta;
-@define-color playerctl-color @magenta;
-@define-color clock-color @blue;
-@define-color cpu-color @green;
-@define-color memory-color @magenta;
-@define-color temperature-color @yellow;
-@define-color temperature-critical-color @red;
-@define-color battery-color @cyan;
-@define-color battery-charging-color @green;
-@define-color battery-warning-color @yellow;
-@define-color battery-critical-color @red;
-@define-color network-color @blue;
-@define-color network-disconnected-color @red;
-@define-color pulseaudio-color @orange;
-@define-color pulseaudio-muted-color @red;
-@define-color backlight-color @yellow;
-@define-color disk-color @cyan;
-@define-color uptime-color @green;
-@define-color updates-color @orange;
-@define-color quote-color @green;
-@define-color idle-inhibitor-color @foreground;
-@define-color idle-inhibitor-active-color @red;
-@define-color lock-color @blue;
-@define-color reboot-color @yellow;
-@define-color power-color @red;
-
 * {
   border: none;
   border-radius: 0;
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 14px;
+  font-size: 13px;
   min-height: 0;
 }
 
+@define-color workspaces-color #c7d4e6;
+@define-color workspaces-focused-fg #62bfae;
+@define-color workspaces-urgent-bg #e76a6a;
+@define-color workspaces-urgent-fg #595959;
+@define-color clock-color #4fb2e6;
+@define-color cpu-color #39d99e;
+@define-color memory-color #d97bb8;
+@define-color network-color #4fb2e6;
+@define-color pulseaudio-color #e69a4c;
+@define-color backlight-color #e6c06c;
+@define-color lock-color #4fb2e6;
+@define-color reboot-color #e6c06c;
+@define-color power-color #e76a6a;
+
 window#waybar {
-  background-color: transparent;
-  color: @foreground;
+  background: rgba(43, 48, 59, 0.5);
+  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  color: white;
 }
 
-.modules-left {
-  background-color: transparent;
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
 }
 
-.modules-left>widget {
-  background-color: transparent;
-  border-bottom-color: transparent;
+tooltip label {
+  color: white;
 }
 
-.modules-left #workspaces,
-.modules-left #custom-weather,
-.modules-left #clock,
-.modules-left #cpu,
-.modules-left #memory,
-.modules-left #custom-temperature,
-.modules-left #battery,
-.modules-left #network,
-.modules-left #bluetooth,
-.modules-left #pulseaudio,
-.modules-left #backlight,
-.modules-left #custom-update,
-.modules-left #custom-voxtype,
-.modules-left #custom-screenrecording-indicator,
-.modules-left #custom-idle-indicator,
-.modules-left #custom-notification-silencing-indicator,
-.modules-left #tray,
-.modules-left #mpris,
-.modules-left #custom-lock,
-.modules-left #custom-reboot,
-.modules-left #custom-power {
-  background-color: transparent;
-  border-bottom-color: transparent;
-}
-
-/* Common module styling */
-#custom-weather,
-#clock,
-#cpu,
-#memory,
-#custom-temperature,
-#battery,
-#network,
-#bluetooth,
-#pulseaudio,
-#backlight,
-#custom-update,
-#custom-voxtype,
-#custom-screenrecording-indicator,
-#custom-idle-indicator,
-#custom-notification-silencing-indicator,
-#tray,
-#mpris,
-#custom-lock,
-#custom-reboot,
-#custom-power {
-  padding: 0 10px;
-  margin: 0 2px;
-  border-bottom: 2px solid transparent;
-  background-color: @background;
-}
-
-/* Workspaces */
 #workspaces button {
-  padding: 0 10px;
+  padding: 0 5px;
   background-color: transparent;
   color: @workspaces-color;
-  margin: 0;
-}
-
-#workspaces button:hover {
-  background: @background-light;
-  box-shadow: inherit;
+  border-bottom: 3px solid transparent;
 }
 
 #workspaces button.active,
@@ -189,135 +54,70 @@ window#waybar {
   color: @workspaces-urgent-fg;
 }
 
-/* Module-specific colors */
-#custom-weather {
-  color: @weather-color;
-  border-bottom-color: @weather-color;
+#custom-weather,
+#custom-lock,
+#custom-reboot,
+#custom-power,
+#network,
+#backlight,
+#pulseaudio,
+#memory,
+#cpu,
+#clock,
+#tray {
+  padding: 0 10px;
 }
 
 #clock {
+  background-color: rgba(43, 48, 59, 0.7);
   color: @clock-color;
-  border-bottom-color: @clock-color;
-}
-
-#cpu {
-  color: @cpu-color;
-  border-bottom-color: @cpu-color;
-}
-
-#memory {
-  color: @memory-color;
-  border-bottom-color: @memory-color;
-}
-
-#custom-temperature {
-  color: @temperature-color;
-  border-bottom-color: @temperature-color;
-}
-
-#custom-temperature.critical {
-  color: @temperature-critical-color;
-  border-bottom-color: @temperature-critical-color;
-}
-
-#battery {
-  color: @battery-color;
-  border-bottom-color: @battery-color;
-}
-
-#battery.charging,
-#battery.plugged {
-  color: @battery-charging-color;
-  border-bottom-color: @battery-charging-color;
-}
-
-#battery.warning:not(.charging) {
-  color: @battery-warning-color;
-  border-bottom-color: @battery-warning-color;
-}
-
-#battery.critical:not(.charging) {
-  color: @battery-critical-color;
-  border-bottom-color: @battery-critical-color;
-}
-
-#network {
-  color: @network-color;
-  border-bottom-color: @network-color;
-}
-
-#network.disconnected {
-  color: @network-disconnected-color;
-  border-bottom-color: @network-disconnected-color;
-}
-
-#pulseaudio {
-  color: @pulseaudio-color;
-  border-bottom-color: @pulseaudio-color;
-}
-
-#pulseaudio.muted {
-  color: @pulseaudio-muted-color;
-  border-bottom-color: @pulseaudio-muted-color;
-}
-
-#backlight {
-  color: @backlight-color;
-  border-bottom-color: @backlight-color;
-}
-
-#custom-update {
-  color: @updates-color;
-  border-bottom-color: @updates-color;
 }
 
 #custom-lock {
   color: @lock-color;
-  border-bottom-color: @lock-color;
-  padding-right: 12px;
+  border-bottom: 2px solid @lock-color;
 }
 
 #custom-reboot {
   color: @reboot-color;
-  border-bottom-color: @reboot-color;
-  padding-right: 12px;
+  border-bottom: 2px solid @reboot-color;
 }
 
 #custom-power {
   color: @power-color;
-  border-bottom-color: @power-color;
-  padding-right: 13px;
+  border-bottom: 2px solid @power-color;
 }
 
-#custom-voxtype {
-  color: @playerctl-color;
-  border-bottom-color: @playerctl-color;
+#network {
+  color: @network-color;
+  border-bottom: 2px solid @network-color;
 }
 
-#custom-idle-indicator,
-#custom-notification-silencing-indicator {
-  color: @idle-inhibitor-color;
+#pulseaudio {
+  color: @pulseaudio-color;
+  border-bottom: 2px solid @pulseaudio-color;
 }
 
-#custom-idle-indicator.active,
-#custom-notification-silencing-indicator.active,
-#custom-screenrecording-indicator.active {
-  color: @idle-inhibitor-active-color;
-  border-bottom-color: @idle-inhibitor-active-color;
+#backlight {
+  color: @backlight-color;
+  border-bottom: 2px solid @backlight-color;
+}
+
+#memory {
+  color: @memory-color;
+  border-bottom: 2px solid @memory-color;
+}
+
+#cpu {
+  color: @cpu-color;
+  border-bottom: 2px solid @cpu-color;
+}
+
+#clock {
+  color: white;
+  border-bottom: 2px solid @clock-color;
 }
 
 #tray {
-  background-color: transparent;
   padding: 0 10px;
-  margin: 0 2px;
-}
-
-#tray>.passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray>.needs-attention {
-  -gtk-icon-effect: highlight;
-  color: @red;
-  border-bottom-color: @red;
 }
