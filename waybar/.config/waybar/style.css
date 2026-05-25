@@ -43,18 +43,18 @@
 @define-color orange #ff8952;
 
 /* Gruvbox Dark */
-@define-color background #282828;
-@define-color background-light #3c3836;
-@define-color foreground #ebdbb2;
-@define-color black #32302f;
-@define-color red #cc241d;
-@define-color green #98971a;
-@define-color yellow #d79921;
-@define-color blue #458588;
-@define-color magenta #b16286;
-@define-color cyan #689d6a;
-@define-color white #ebdbb2;
-@define-color orange #d65d0e;
+@define-color background #10151c;
+@define-color background-light #1a2431;
+@define-color foreground #c7d4e6;
+@define-color black #595959;
+@define-color red #e76a6a;
+@define-color green #39d99e;
+@define-color yellow #e6c06c;
+@define-color blue #4fb2e6;
+@define-color magenta #d97bb8;
+@define-color cyan #62bfae;
+@define-color white #dbe3ee;
+@define-color orange #e69a4c;
 
 /* Module colors */
 @define-color workspaces-color @foreground;
@@ -96,8 +96,42 @@
 }
 
 window#waybar {
-  background-color: @background;
+  background-color: transparent;
   color: @foreground;
+}
+
+.modules-left {
+  background-color: transparent;
+}
+
+.modules-left>widget {
+  background-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.modules-left #workspaces,
+.modules-left #custom-weather,
+.modules-left #clock,
+.modules-left #cpu,
+.modules-left #memory,
+.modules-left #custom-temperature,
+.modules-left #battery,
+.modules-left #network,
+.modules-left #bluetooth,
+.modules-left #pulseaudio,
+.modules-left #backlight,
+.modules-left #custom-update,
+.modules-left #custom-voxtype,
+.modules-left #custom-screenrecording-indicator,
+.modules-left #custom-idle-indicator,
+.modules-left #custom-notification-silencing-indicator,
+.modules-left #tray,
+.modules-left #mpris,
+.modules-left #custom-lock,
+.modules-left #custom-reboot,
+.modules-left #custom-power {
+  background-color: transparent;
+  border-bottom-color: transparent;
 }
 
 /* Common module styling */
@@ -124,7 +158,7 @@ window#waybar {
   padding: 0 10px;
   margin: 0 2px;
   border-bottom: 2px solid transparent;
-  background-color: transparent;
+  background-color: @background;
 }
 
 /* Workspaces */
@@ -257,11 +291,11 @@ window#waybar {
   margin: 0 2px;
 }
 
-#tray > .passive {
+#tray>.passive {
   -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
   -gtk-icon-effect: highlight;
   color: @red;
   border-bottom-color: @red;

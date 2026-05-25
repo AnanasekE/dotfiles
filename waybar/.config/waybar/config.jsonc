@@ -3,17 +3,14 @@
   "position": "top",
   "height": 30,
   "spacing": 1,
-  "modules-left": [
-    "hyprland/workspaces",
-    "custom/weather"
-  ],
+  "modules-left": ["hyprland/workspaces", "custom/weather"],
   "modules-right": [
     "network",
     "backlight",
     "pulseaudio",
     "memory",
     "cpu",
-    "clock"
+    "clock",
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -21,21 +18,15 @@
     "cursor": true,
     "format": "{icon}",
     "persistent-workspaces": {
-      "*": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    }
+      "*": [1, 2, 3, 4, 5],
+    },
   },
   "custom/weather": {
     "format": "{}°",
     "tooltip": true,
     "interval": 600,
     "exec": "wttrbar --nerd --location Changchun",
-    "return-type": "json"
+    "return-type": "json",
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -47,35 +38,35 @@
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
-    "spacing": 1
+    "spacing": 1,
   },
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "{icon} {volume}%",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "",
+    "format-muted": " {volume}%",
     "format-icons": {
       "headphone": "",
       "headset": "",
-      "default": ["", "", ""]
-    }
+      "default": ["", "", ""],
+    },
   },
   "backlight": {
     "format": "{percent}% {icon}",
-    "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+    "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"],
   },
   "memory": {
     "format": " {used:0.1f}gb",
-    "interval": 2
+    "interval": 2,
   },
   "cpu": {
     "interval": 5,
-    "format": "󰍛"
+    "format": "󰍛 {usage}%",
   },
   "clock": {
-    "format": "{:%I:%M %p}",
+    "format": "{:%H:%M}",
     "format-alt": "{:%A %d/%m/%Y}",
-    "tooltip-format": "<span>{calendar}</span>"
-  }
+    "tooltip-format": "<span>{calendar}</span>",
+  },
 }
