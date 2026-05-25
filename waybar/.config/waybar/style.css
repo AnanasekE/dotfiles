@@ -16,6 +16,7 @@
 @define-color network-color #4fb2e6;
 @define-color pulseaudio-color #e69a4c;
 @define-color backlight-color #e6c06c;
+@define-color battery-color #a6da95;
 @define-color power-color #e76a6a;
 
 window#waybar {
@@ -56,6 +57,7 @@ tooltip label {
 #custom-power,
 #network,
 #backlight,
+#battery,
 #pulseaudio,
 #memory,
 #cpu,
@@ -88,6 +90,11 @@ tooltip label {
 #backlight {
   color: @backlight-color;
   border-bottom: 2px solid @backlight-color;
+}
+
+#battery {
+  color: @battery-color;
+  border-bottom: 2px solid @battery-color;
 }
 
 #memory {
